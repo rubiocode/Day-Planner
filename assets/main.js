@@ -1,3 +1,16 @@
+/*$(document).ready(function() {}*/
+
+let scheduleTime = {
+    '9':'',
+    '10':'',
+    '11':'',
+    '12':'',
+    '13':'',
+    '14':'',
+    '15':'',
+    '16':'',
+    '17':'',
+}
 
 // .ready function to update all times as soon as the page is rendered
 
@@ -25,28 +38,59 @@
     })
 
     // setting up local storage and render todo list
+  
+    //create an object - make a key for each hour, set their value to empty string, will be saved in the local storage
+  
+  //change the scheduleObj to the item saved in the local storage
 
-function renderTodoList() {
-    let todos= localStorage.getItem("todos");
-    if (!todos) {
-    return;
-    };
-    $("textarea").text(todos);
+    /*function init() {
+    let storedTodos = JSON.parse(localStorage.getItem('todos'));
+    if (storedTodos !== null) {
+        scheduleTime = storedTodos;
+    }
+    //change the text inside the textarea to the local storage item
+    let todosValue = Array.from($('inpValue'));
+    todosValue.forEach(element => {
+        let timeValue = element.getAttribute('text-value');
+        element.textContent(scheduleTime[timeValue]);
+    });
+}
+init();*/
+
+
+const saveBtn = document.querySelectorAll("myClass");
+const todoList = document.querySelector(".container");
+const todoInput = document.querySelectorAll(".inpValue");
+let todos=[];
+
+
+function init(){
+    let saveTodos= JSON.parse(local.getItem("todos"));
+    if (saveTodos !==null) {
+        todos = saveTodos;
+    }
 }
 
+init();
 
+
+function saveTodos () {
+
+    localStorage.setItem('todos', JSON.stringify(todos));
+
+}
+
+saveBtn.addEventListener ('click', function(event){
+    event.preventDefault();
     
-    let btnEl= document.getElementsByClassName("far fa-save")
-    
-    btnEl.addEventListener("click", function(event) {
-        event.preventDefault();
-        if (todos==="") {
-                alert("Please type a todo in a time slot");
-            return;
-        } else {
-            alert("Todo saved to planner");
-            todos;
-            localStorage.setItem("todos".todos);
-            renderTodoList();
-        }
-    });
+        todoInput= todos.values.trim();
+
+    if (todoInput ==="") {
+        return;
+    }
+    todos.push(todoInput);
+    todos.value="";
+
+
+    saveTodos();
+});
