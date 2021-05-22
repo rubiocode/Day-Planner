@@ -14,7 +14,7 @@ $(document).ready(function(){
     
 
 // getting time on header set up using moments.js
-
+    
     let today = function timeStamp (){
     $('#currentDay').text(moment().format('MMMM Do YYYY, h:mm:ss a'));
     };
@@ -23,6 +23,8 @@ $(document).ready(function(){
     setInterval(today, 1000);
     
     
+
+
     // setting function to link html time and actual time and color coding
 
     const currentHour = moment().hour()
@@ -50,13 +52,29 @@ $(document).ready(function(){
         let todoInput = $(this).siblings(".inpValue").val();
         let timeEl=$(this).parent(".row").attr("id");
 
-        localStorage.setItem(timeEl, JSON.stringify(todoInput));
+        localStorage.setItem(todoInput, JSON.stringify(timeEl));
         
 
         if (!todoInput || todoInput === "") {
-            alert("You must enter a todo before saving")
+            alert("You must make an entry before saving")
         }
         
     });
 
 }) 
+
+//adding greeting
+let today = new Date();
+let greeting;
+let hourNow= today.getHours ();
+if (hourNow >18) {
+    greeting = 'Good Evening!';
+} else if (hourNow > 12) {
+    greeting= 'Good Afternoon!';
+} else if (hourNow > 0) {
+    greeting = 'Good Morning';
+} else {
+    greeting = 'Welcome';
+}
+document.write (greeting);
+
