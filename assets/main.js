@@ -49,8 +49,7 @@ $(document).ready(function(){
         let todoInput = $(this).siblings(".inpValue").val();
         let timeEl=$(this).parent(".row").attr("id");
 
-        localStorage.setItem(todoInput, JSON.stringify(timeEl));
-        
+        localStorage.setItem(timeEl, todoInput);        
 
         if (!todoInput || todoInput === "") {
             alert("You must make an entry before saving")
