@@ -62,19 +62,3 @@ $(document).ready(function(){
     });
 
 }) 
-
-//adding greeting
-let today = new Date();
-let greeting;
-let hourNow= today.getHours ();
-if (hourNow >18) {
-    greeting = 'Good Evening!';
-} else if (hourNow > 12) {
-    greeting= 'Good Afternoon!';
-} else if (hourNow > 0) {
-    greeting = 'Good Morning';
-} else {
-    greeting = 'Welcome';
-}
-document.write (greeting);
-

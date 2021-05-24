@@ -2,8 +2,6 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 1;
-    background-image: url(https://www.10wallpaper.com/wallpaper/2560x1440/2005/Lake_Sunrise_Stone_Skyline_2020_Nature_Scenery_Photo_2560x1440.jpg);
-    background-size: cover;
   }
   
   textarea {
@@ -64,7 +62,7 @@ body {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: #06aed5;
-    color: white;
+    color: rgb(10, 10, 10);
   }
   
   .saveBtn i:hover {
@@ -73,6 +71,7 @@ body {
   }
 
   .time {
+    font-size: 1rem;
     padding-top: 2rem;
   }
   
