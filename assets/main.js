@@ -22,9 +22,6 @@ $(document).ready(function(){
     //setInterval function to update every second so the today function keeps updating
     setInterval(today, 1000);
     
-    
-
-
     // setting function to link html time and actual time and color coding
 
     const currentHour = moment().hour()

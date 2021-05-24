@@ -5,8 +5,9 @@ This simple calendar application allows the user save events for each hour of th
 
 This application was built using [Moment.js](https://momentjs.com/), starter HTML and CSS code provided my Trilogy.
 
-** Deployed URL:** https
+## _Deployed URL:_ https://rubiocode.github.io/Day-Planner/index.html
 
-** Github URL:** https://github.
+## _Github URL:_ https://github.com/rubiocode/Day-Planner
 
 
+![image](https://user-images.githubusercontent.com/78938193/119292375-1cdc7380-bc05-11eb-97fc-593e8615f3cf.png)
